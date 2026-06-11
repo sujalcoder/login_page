@@ -6,7 +6,6 @@ app = Flask(__name__)
 client = MongoClient("mongodb+srv://root:root@tech1.kglkjga.mongodb.net/?appName=Tech1")
 db = client["login_db"]
 users = db["users"]
-
 @app.route('/')
 def login():
     return render_template('login.html')
